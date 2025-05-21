@@ -52,6 +52,14 @@
                 <Button xmlns="sap.m" text="Reset" id="colors_reset_button" type="Reject" press="displayColorsReset"/>
                 <Text xmlns="sap.m" text="Output:" id="colors_output"/></sap.ui.layout.form:content>
         </sap.ui.layout.form:SimpleForm>
+
+        <sap.ui.layout.form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form5">
+            <sap.ui.layout.form:content>
+                <sap.ui.core:Title text="Display the best among Gibo, Patrick, and MJ !" id="skills_title"/>
+                <Button xmlns="sap.m" text="Display" id="skills_button" type="Accept" press="displayBest"/>
+                <Button xmlns="sap.m" text="Reset" id="skills_reset_button" type="Reject" press="displayBestReset"/>
+                <Text xmlns="sap.m" text="Output:" id="skills_output"/></sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm>
     </content>
     </Page>
 </mvc:View>

@@ -193,7 +193,9 @@ function drawX(height){
 }
 
 function trianglePerimeter(s1, s2, s3){
-    return s1 + s2 + s3;
+    if((s1 + s2) > s3 && (s2 + s3) > s1 && (s3 + s1) > s2) // triangle inequality theorem
+        return s1 + s2 + s3;
+    return "Not a triangle";
 }
 
 function colorDisp(){
@@ -222,5 +224,48 @@ function colorDisp(){
 
         output += "color is " + color[index - 1] + ".\n";
     }
+    return output;
+}
+
+function skillsDisp(){
+    let record = [{
+
+        "Name":"Gibo",
+        "Age":16,
+        "SkillSet" : [{
+        "Skill":"SAP UI5"
+        },{
+        "Skill":"SAP HANA"
+        }]
+        }, {
+        
+        "Name":"Patrick",
+        "Age":22,
+        "SkillSet" : [{
+        "Skill":"SAP UI5"
+        }, {
+        "Skill":"SAP HANA"
+        }, {
+        "Skill":"SAP ABAP"
+        }]
+        }, {
+        
+        "Name":"MJ",
+        "Age":24,
+        "SkillSet" : [{
+        "Skill":"SAP HANA"
+        }]
+        
+        }];
+
+    let temp = record[0];
+    for (let index = 0; index < record.length - 1; index++) {
+        if (record[index+1]["SkillSet"].length > temp["SkillSet"].length) {
+            temp = record[index+1];
+        }
+    }
+
+    output = "\nName: " + temp.Name + "\nAge: " + temp.Age;
+
     return output;
 }
