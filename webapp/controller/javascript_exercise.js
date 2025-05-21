@@ -1,61 +1,4 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-], (Controller) => {
-    "use strict";
-
-    return Controller.extend("ui5jsexercise.controller.Exer2View1", {
-        onInit() {
-        },
-
-        convertNumbersToWords(){
-            let number = this.getView().byId('num_to_words_input').getValue();
-            this.getView().byId('num_to_words_output').setText("Output: "); // allow resetting
-            let output = this.getView().byId('num_to_words_output').getText();
-            
-            output += convertNumToWord(number);
-
-            this.getView().byId('num_to_words_output').setText(output);
-        },
-
-        convertNumbersToWordsReset(){
-            this.getView().byId('num_to_words_input').setValue("");
-            this.getView().byId('num_to_words_output').setText("Output: ");
-        },
-
-        drawTriangle(){
-            let number = this.getView().byId('triangle_input').getValue();
-            this.getView().byId('triangle_output').setValue("Output: "); // allow resetting
-            let output = this.getView().byId('triangle_output').getValue();
-            
-            output += "\n" + drawTriangle(number);
-
-            this.getView().byId('triangle_output').setValue(output);
-        },
-
-        drawTriangleReset(){
-            this.getView().byId('triangle_input').setValue("");
-            this.getView().byId('triangle_output').setValue("Output: ");
-        },
-
-        drawX(){
-            let number = this.getView().byId('x_input').getValue();
-            this.getView().byId('x_output').setValue("Output: "); // allow resetting
-            let output = this.getView().byId('x_output').getValue();
-            
-            output += "\n" + drawTriangle(number);
-
-            this.getView().byId('x_output').setValue(output);
-        },
-
-        drawXReset(){
-            this.getView().byId('x_input').setValue("");
-            this.getView().byId('x_output').setValue("Output: ");
-        },
-    });
-});
-
 function convertNumToWord(number){
-    let output = "";
     if( number < 1 || number > 999){ //reject invalid values
         output += " Invalid!";
         return output;
@@ -224,22 +167,6 @@ function drawTriangle(number){
         }
         output += "\n";
         i++;
-    }
-    return output;
-}
-
-function drawX(number){
-    let output = "";
-
-    if(!(output % 2)){
-        output += "Can't draw a proper X.";
-        return output;
-    }
-
-    for (let i = 0; i < number; 1++) {
-        for (let j = 0; i < number; 1++) {
-
-        }
     }
     return output;
 }

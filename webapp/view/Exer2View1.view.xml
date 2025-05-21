@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5jsexercise.controller.Exer2View1">
     <Page id="page" title="{i18n>title}">
     <content>
-        <sap.ui.layout.form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form0">
+        <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form0">
             <sap.ui.layout.form:content>
                 <sap.ui.core:Title text="Numbers to Words" id="title0"/>
                 <Label text="Input a number" id="label0"/>
@@ -9,6 +9,38 @@
                 <Button xmlns="sap.m" text="Convert!" id="num_to_words_convert" type="Accept" press="convertNumbersToWords"/>
                 <Button xmlns="sap.m" text="Reset" id="num_to_words_reset" type="Reject" press="convertNumbersToWordsReset"/>
                 <sap.ui.core:Title text="Output:" id="num_to_words_output"/></sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm>
+
+        <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form1">
+            <sap.ui.layout.form:content>
+                <sap.ui.core:Title text="Inverted Right triangle" id="title1"/>
+                <Label text="Input a number" id="label1"/>
+                <Input width="100%" id="triangle_input"/>
+                <Button xmlns="sap.m" text="Draw!" id="triangle_draw" type="Accept" press="drawTriangle"/>
+                <Button xmlns="sap.m" text="Reset" id="triangle_reset" type="Reject" press="drawTriangleReset"/>
+                <TextArea xmlns="sap.m" rows="15" id="triangle_output" value="Output:"/></sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm>
+
+        <sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form2">
+
+            <sap.ui.layout.form:content>
+
+                <sap.ui.core:Title text="Cross (X)" id="title2"/>
+
+                <Label xmlns="sap.m" text="Input a number" id="label2"/>
+
+                <Input xmlns="sap.m" width="100%" id="x_input"/>
+
+                <Button xmlns="sap.m" text="Draw!" id="x_draw" type="Accept" press="drawTriangle"/>
+
+                <Button xmlns="sap.m" text="Reset" id="x_reset" type="Reject" press="convertNumbersToWordsReset"/>
+
+                <TextArea xmlns="sap.m" rows="15" id="x_output" value="Output:"/>
+
+                </sap.ui.layout.form:content>
+
+            
+
         </sap.ui.layout.form:SimpleForm>
     </content>
     </Page>
