@@ -86,7 +86,7 @@ sap.ui.define([
         displayBest(){
             this.getView().byId('skills_output').setText("Output: ");
             let output = this.getView().byId('skills_output').getText();
-            output += skillsDispDisp();
+            output += skillsDisp();
 
             this.getView().byId('skills_output').setText(output);
         },
