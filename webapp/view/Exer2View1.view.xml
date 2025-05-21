@@ -46,17 +46,11 @@
         </sap.ui.layout.form:SimpleForm>
 
         <sap.ui.layout.form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form4">
-
             <sap.ui.layout.form:content>
-
                 <sap.ui.core:Title text="Display the colors!" id="colors_title"/>
-
-                <Button xmlns="sap.m" text="Display" id="colors_button" type="Accept"/>
-
-                <Button xmlns="sap.m" text="Reset" id="colors_reset_button"/>
-
+                <Button xmlns="sap.m" text="Display" id="colors_button" type="Accept" press="displayColors"/>
+                <Button xmlns="sap.m" text="Reset" id="colors_reset_button" type="Reject" press="displayColorsReset"/>
                 <Text xmlns="sap.m" text="Output:" id="colors_output"/></sap.ui.layout.form:content>
-
         </sap.ui.layout.form:SimpleForm>
     </content>
     </Page>

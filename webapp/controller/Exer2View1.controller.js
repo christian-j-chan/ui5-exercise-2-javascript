@@ -280,9 +280,7 @@ function drawX(height){
 }
 
 function trianglePerimeter(s1, s2, s3){
-    if((s1 + s2) > s3 && (s2 + s3) > s1 && (s3 + s1) > s2) // triangle inequality theorem
-        return s1 + s2 + s3;
-    return "Not a triangle";
+    return s1 + s2 + s3;
 }
 
 function colorDisp(){
