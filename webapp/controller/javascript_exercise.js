@@ -1,4 +1,5 @@
 function convertNumToWord(number){
+    let output = "";
     if( number < 1 || number > 999){ //reject invalid values
         output += " Invalid!";
         return output;
@@ -152,12 +153,12 @@ function convertNumToWord(number){
     return output;
 }
 
-function drawTriangle(number){
+function drawTriangle(height){
     let output = "", i = 0;
 
-    while(i < number){
+    while(i < height){
         let j = 0;
-        while(j < number){
+        while(j < height){
             if( j >= i ){
                 output += "*";
             } else {
@@ -171,6 +172,57 @@ function drawTriangle(number){
     return output;
 }
 
+function drawX(height){
+    let output = "";
+
+    if(!(height % 2)){
+        output += "Can't draw a proper X.";
+        return output;
+    }
+
+    for (let i = 0; i < height; i++) {
+        for (let j = 0; j < height; j++) {
+            if(j == i || j == height - (i + 1))
+                output += "*";
+            else
+                output += " ";
+        }
+        output += "\n";
+    }
+    return output;
+}
+
 function trianglePerimeter(s1, s2, s3){
-    return s1 + s2 + s3;
+    if((s1 + s2) > s3 && (s2 + s3) > s1 && (s3 + s1) > s2) // triangle inequality theorem
+        return s1 + s2 + s3;
+    return "Not a triangle";
+}
+
+function colorDisp(){
+    let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+    let o = ["th","st","nd","rd"];
+    let output = "";
+
+    for (let index = 1; index <= color.length; index++) {
+        switch (index) {
+            case 1:
+                output += index + o[index] + " ";
+                break;
+
+            case 2:
+                output += index + o[index] + " ";
+                break;
+
+            case 3:
+                output += index + o[index] + " ";
+                break;
+
+            default:
+                output += index + o[0] + " ";
+                break;
+        }
+
+        output += "color is " + color[index - 1] + ".\n";
+    }
+    return output;
 }

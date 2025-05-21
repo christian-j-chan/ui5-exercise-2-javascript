@@ -22,24 +22,40 @@
         </sap.ui.layout.form:SimpleForm>
 
         <sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form2">
+            <sap.ui.layout.form:content>
+                <sap.ui.core:Title text="Cross (X)" id="title2"/>
+                <Label xmlns="sap.m" text="Input a number" id="label2"/>
+                <Input xmlns="sap.m" width="100%" id="x_input"/>
+                <Button xmlns="sap.m" text="Draw!" id="x_draw" type="Accept" press="drawX"/>
+                <Button xmlns="sap.m" text="Reset" id="x_reset" type="Reject" press="drawXReset"/>
+                <TextArea xmlns="sap.m" rows="15" id="x_output" value="Output:"/>
+            </sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm>
+
+        <sap.ui.layout.form:SimpleForm xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true" layout="ResponsiveGridLayout" id="form3">
+            <sap.ui.layout.form:content>
+                <sap.ui.core:Title text="Triangle Perimeter" id="title3"/>
+                <Label xmlns="sap.m" text="Input three sides to a triangle." id="label3"/>
+                <Input xmlns="sap.m" width="100%" id="side1_input"/>
+                <Input xmlns="sap.m" width="100%" id="side2_input"/>
+                <Input xmlns="sap.m" width="100%" id="side3_input"/>
+                <Button xmlns="sap.m" text="Calculate!" id="perimeter_calc" type="Accept" press="perimeterTriangle"/>
+                <Button xmlns="sap.m" text="Reset" id="perimeter_reset" type="Reject" press="perimeterTriangleReset"/>
+                <sap.ui.core:Title text="Output:" id="perimeter_output"/>
+            </sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm>
+
+        <sap.ui.layout.form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form4">
 
             <sap.ui.layout.form:content>
 
-                <sap.ui.core:Title text="Cross (X)" id="title2"/>
+                <sap.ui.core:Title text="Display the colors!" id="colors_title"/>
 
-                <Label xmlns="sap.m" text="Input a number" id="label2"/>
+                <Button xmlns="sap.m" text="Display" id="colors_button" type="Accept"/>
 
-                <Input xmlns="sap.m" width="100%" id="x_input"/>
+                <Button xmlns="sap.m" text="Reset" id="colors_reset_button"/>
 
-                <Button xmlns="sap.m" text="Draw!" id="x_draw" type="Accept" press="drawTriangle"/>
-
-                <Button xmlns="sap.m" text="Reset" id="x_reset" type="Reject" press="convertNumbersToWordsReset"/>
-
-                <TextArea xmlns="sap.m" rows="15" id="x_output" value="Output:"/>
-
-                </sap.ui.layout.form:content>
-
-            
+                <Text xmlns="sap.m" text="Output:" id="colors_output"/></sap.ui.layout.form:content>
 
         </sap.ui.layout.form:SimpleForm>
     </content>
