@@ -1,6 +1,14 @@
-<mvc:View controllerName="ui5jsexercise.controller.Exer2View1"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5jsexercise.controller.Exer2View1">
     <Page id="page" title="{i18n>title}">
+    <content>
+        <sap.ui.layout.form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" id="form0">
+            <sap.ui.layout.form:content>
+                <sap.ui.core:Title text="Numbers to Words" id="title0"/>
+                <Label text="Input a number" id="label0"/>
+                <Input width="100%" id="num_to_words_input"/>
+                <Button xmlns="sap.m" text="Convert!" id="num_to_words_convert" type="Accept"/>
+                <Button xmlns="sap.m" text="Reset" id="num_to_words_reset" type="Reject"/></sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm>
+    </content>
     </Page>
 </mvc:View>
